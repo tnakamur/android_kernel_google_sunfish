@@ -12,7 +12,9 @@ function update_nocfi_config() {
     -d CFI_PERMISSIVE \
     -d CFI_CLANG \
     -e RD_LZMA \
-    -e CONFIG_TOUCHSCREEN_FTS
+    -e CONFIG_TOUCHSCREEN_FTS \
+    -e CONFIG_QCA_CLD_WLAN \
+    -e CONFIG_QCA_CLD_WLAN_PROFILE="default"
   (cd ${OUT_DIR} && \
    make ${CC_LD_ARG} O=${OUT_DIR} olddefconfig)
 }
